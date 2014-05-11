@@ -1,0 +1,27 @@
+{
+  "name": "nodebootstrap"
+  , "description": "CLI tool for NodeBootstrap"
+  , "version": "0.1.0"
+  , "repository": {
+      "type": "git"
+    , "url": "git@github.com:inadarei/nodebootstrap-cli.git"
+    }
+  , "author": "Irakli Nadareishvili <irakli@gmail.com> (http://freshblurbs.com)"
+  , "contributors": []
+  , "bin": { "nodebootstrap": "./bin/nodebootstrap" }
+  , "engines": [ "node >=0.8.0" ]
+  , "dependencies" : {
+      "colors"      : "*"
+    , "commander"   : "*"
+    , "request"     : "*"
+    , "unzip"       : "*"
+    }
+  , "keywords": [
+      "node"
+    , "express"
+    , "boilerplate"
+    , "kit"
+    , "bootstrap"
+    , "best practices"
+  ]
+}
