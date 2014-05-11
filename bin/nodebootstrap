@@ -10,7 +10,7 @@ var program = require('commander')
 var projectURL = "https://github.com/inadarei/nodebootstrap/archive/master.zip";
 
 program
-  .version('0.0.1');
+  .version('0.6.2');
 
 program
   .description('Bootstrap new Node/Express.js project.')
