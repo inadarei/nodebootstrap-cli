@@ -2,6 +2,7 @@
 
 var program = require('commander')
   , os      = require('os')
+  , path    = require('path')
   , fs      = require('fs')
   , unzip   = require('unzip')
   , cli     = require('child_process')
@@ -10,7 +11,7 @@ var program = require('commander')
 var projectURL = "https://github.com/inadarei/nodebootstrap/archive/master.zip";
 
 program
-  .version('1.0.3');
+  .version('1.1.1');
 
 program
   .description('Bootstrap new Node/Express.js project.')
@@ -33,6 +34,9 @@ if (!program.args.length) program.help();
 
 function build_bootstrapped_project(projectPath) {
   var tmp = os.tmpdir();
+  
+  // Mac adds "/" to tmpdir(), Linux Debian doesn't. Life's great.
+  if (tmp.substr(-1) !== path.sep) { tmp = tmp + path.sep }; 
 
   var zipFilepath = tmp + Date.now() + "-nodebootstrap.zip";
   var writer = fs.createWriteStream(zipFilepath);
