@@ -5,13 +5,14 @@ var program = require('commander')
   , path    = require('path')
   , fs      = require('fs')
   , unzip   = require('unzip')
+  , mv      = require('mv')
   , cli     = require('child_process')
   , request = require('request');
 
 var projectURL = "https://github.com/inadarei/nodebootstrap/archive/master.zip";
 
 program
-  .version('1.1.1');
+  .version('1.1.2');
 
 program
   .description('Bootstrap new Node/Express.js project.')
@@ -50,7 +51,7 @@ function build_bootstrapped_project(projectPath) {
     extractor.on('close', function() {
       fs.unlinkSync(zipFilepath);
 
-      fs.rename(tmp + 'nodebootstrap-master', projectPath, function (err) {
+      mv(tmp + 'nodebootstrap-master', projectPath, function (err) {
         if (err) {
           throw err;
           process.exit(1);

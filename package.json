@@ -1,7 +1,7 @@
 {
   "name": "nodebootstrap"
-  , "description": "CLI tool for NodeBootstrap"
-  , "version": "1.1.1"
+  , "description": "CLI build tool for NodeBootstrap"
+  , "version": "1.1.2"
   , "repository": {
       "type": "git"
     , "url": "git@github.com:inadarei/nodebootstrap-cli.git"
@@ -11,10 +11,11 @@
   , "bin": { "nodebootstrap": "./bin/nodebootstrap" }
   , "engines": [ "node >=0.8.0" ]
   , "dependencies" : {
-      "colors"      : "*"
-    , "commander"   : "*"
-    , "request"     : "*"
-    , "unzip"       : "*"
+      "colors"      : "^1.0.3"
+    , "commander"   : "^2.5.0"
+    , "request"     : "^2.48.0"
+    , "unzip"       : "^0.1.11"
+    , "mv"          : "^2.0.3"
     }
   , "keywords": [
       "node"
