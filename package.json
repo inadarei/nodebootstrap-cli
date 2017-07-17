@@ -1,28 +1,46 @@
 {
-  "name": "nodebootstrap"
-  , "description": "CLI build tool for NodeBootstrap"
-  , "version": "1.1.2"
-  , "repository": {
-      "type": "git"
-    , "url": "git@github.com:inadarei/nodebootstrap-cli.git"
-    }
-  , "author": "Irakli Nadareishvili <irakli@gmail.com> (http://freshblurbs.com)"
-  , "contributors": []
-  , "bin": { "nodebootstrap": "./bin/nodebootstrap" }
-  , "engines": [ "node >=0.8.0" ]
-  , "dependencies" : {
-      "colors"      : "^1.0.3"
-    , "commander"   : "^2.5.0"
-    , "request"     : "^2.48.0"
-    , "unzip"       : "^0.1.11"
-    , "mv"          : "^2.0.3"
-    }
-  , "keywords": [
-      "node"
-    , "express"
-    , "boilerplate"
-    , "kit"
-    , "bootstrap"
-    , "best practices"
-  ]
+  "name": "nodebootstrap-cli-example",
+  "private": true,
+  "description": "",
+  "author": "",
+  "license": "UNLICENSE",
+  "main": "./application.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": ">=6.1"
+  },
+  "bin": {
+    "nodebootstrap-cli-example": "./nodebootstrap-cli-example"
+  },
+  "dependencies": {
+    "app-module-path": "^2.1.0",
+    "axios": "^0.16.1",
+    "bluebird": "^3.5.0",
+    "config": "*",
+    "glob": "^7.0.0",
+    "lodash": "^4.3.0",
+    "metalogger": "*",
+    "morgan": "^1.8.1",
+    "uuid": "^3.0.1",
+    "yaml": "*",
+    "yargs": "^8.0.2"
+  },
+  "devDependencies": {
+    "after": "^0.8.1",
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.2",
+    "jshint": "^2.5.x",
+    "mocha": "^3.0.0",
+    "nock": "^9.0.0",
+    "should": "^11.0.0",
+    "sinon": "^2.1.0",
+    "supertest": "^3.0.0"
+  },
+  "scripts": {
+    "test-native": "mocha --bail test/ test/acceptance/",
+    "test-cov-native": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- --reporter dot test/ test/acceptance/"
+  }
 }
