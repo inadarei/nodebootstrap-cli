@@ -33,14 +33,14 @@
     "chai": "^3.5.0",
     "istanbul": "^0.4.2",
     "jshint": "^2.5.x",
-    "mocha": "^3.0.0",
+    "mocha": "^3.4.2",
     "nock": "^9.0.0",
     "should": "^11.0.0",
     "sinon": "^2.1.0",
     "supertest": "^3.0.0"
   },
   "scripts": {
-    "test-native": "mocha --bail test/ test/acceptance/",
-    "test-cov-native": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- --reporter dot test/ test/acceptance/"
+    "test": "mocha --bail test/ test/unit/",
+    "test-cov": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- --reporter dot test/ test/acceptance/"
   }
 }

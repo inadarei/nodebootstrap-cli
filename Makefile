@@ -30,4 +30,4 @@ install-dev-package:
 
 .PHONY: test
 test:
-	docker-compose run nodebootstrap-cli-example npm run test-native
+	docker-compose run nodebootstrap-cli-example npm run test
