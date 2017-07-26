@@ -52,7 +52,7 @@ Inspecting health of the containers:
 > make logs
 ```
 
-## Installing a new packagey
+## Installing a new package
 
 Installing a package:
 
@@ -66,25 +66,9 @@ Install a package in dev-dependencies:
 npm run install-dev-package <packagename>
 ```
 
-## Database Migrations (Currently: MySQL)
-
-```
-# Create migration:
-> npm run migration-create <migration-name>
-# e.g.: 
-> npm run migration-create create-users-table
-# Run migrations:
-> make migrate
-```
-
-## Accessing the microservice:
-
-http://localhost:5501/
-
 ## Running Automated Tests
 
-1. Make sure the microservice is up (if not: run `make clean` or `make start`)
-2. Run: `make test`
+1. Run: `make test`
 
 ## License
 
