@@ -5,10 +5,6 @@
   "author": "",
   "license": "UNLICENSE",
   "main": "./application.js",
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
   "engines": {
     "node": ">=6.1"
   },
@@ -17,7 +13,7 @@
   },
   "dependencies": {
     "app-module-path": "^2.1.0",
-    "axios": "^0.16.1",
+    "axios": "^0.17.0",
     "bluebird": "^3.5.0",
     "config": "*",
     "glob": "^7.0.0",
@@ -26,20 +22,24 @@
     "morgan": "^1.8.1",
     "uuid": "^3.0.1",
     "yaml": "*",
-    "yargs": "^8.0.2"
+    "yargs": "^10.0.0"
   },
   "devDependencies": {
     "after": "^0.8.1",
-    "chai": "^3.5.0",
+    "chai": "^4.1.2",
+    "db-migrate": "^0.10.0-beta.20",
+    "db-migrate-mysql": "^1.1.10",
+    "eslint": "^4.11.0",
+    "eslint-plugin-mocha": "^4.11.0",
     "istanbul": "^0.4.2",
-    "jshint": "^2.5.x",
-    "mocha": "^3.4.2",
+    "mocha": "^4.0.0",
     "nock": "^9.0.0",
-    "should": "^11.0.0",
-    "sinon": "^2.1.0",
+    "should": "^13.0.0",
+    "sinon": "^4.1.0",
     "supertest": "^3.0.0"
   },
   "scripts": {
+    "pretest": "node_modules/eslint/bin/eslint.js lib test server.js appConfig.js",
     "test": "mocha --bail test/ test/unit/",
     "test-cov": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- --reporter dot test/ test/acceptance/"
   }
