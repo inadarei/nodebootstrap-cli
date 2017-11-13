@@ -11,6 +11,7 @@ rules:
   quotes: off
   indent: off
   no-unused-vars: off
+  prefer-const: warn
   linebreak-style:
     - error
     - unix

@@ -26,7 +26,7 @@ describe('some test as just an example', function() {
   });
 
   it('Fun test of easy module loading from lib', function() {
-    let some = require('logic');
+    const some = require('logic');
     assert.equal(true, true); // if we reached this, module was loaded.
   });
 
