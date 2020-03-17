@@ -26,7 +26,7 @@
     "morgan": "^1.8.1",
     "uuid": "^3.0.1",
     "yaml": "*",
-    "yargs": "^8.0.2"
+    "yargs": "^13.1.0"
   },
   "devDependencies": {
     "after": "^0.8.1",
