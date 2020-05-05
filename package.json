@@ -26,7 +26,8 @@
     "morgan": "^1.8.1",
     "uuid": "^3.0.1",
     "yaml": "*",
-    "yargs": "^8.0.2"
+    "yargs": "^8.0.2",
+    "snyk": "^1.319.0"
   },
   "devDependencies": {
     "after": "^0.8.1",
@@ -41,6 +42,9 @@
   },
   "scripts": {
     "test": "mocha --bail test/ test/unit/",
-    "test-cov": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- --reporter dot test/ test/acceptance/"
-  }
+    "test-cov": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- --reporter dot test/ test/acceptance/",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
