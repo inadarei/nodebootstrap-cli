@@ -26,14 +26,14 @@
     "morgan": "^1.8.1",
     "uuid": "^3.0.1",
     "yaml": "*",
-    "yargs": "^10.0.0"
+    "yargs": "^16.2.0"
   },
   "devDependencies": {
     "after": "^0.8.1",
     "chai": "^3.5.0",
     "istanbul": "^0.4.2",
     "jshint": "^2.5.x",
-    "mocha": "^3.4.2",
+    "mocha": "^8.3.2",
     "nock": "^9.0.0",
     "should": "^11.0.0",
     "sinon": "^2.1.0",
